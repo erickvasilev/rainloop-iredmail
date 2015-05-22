@@ -50,7 +50,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param string $sHost
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetHost($sHost)
@@ -61,7 +60,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param int $iPort
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetPort($iPort)
@@ -72,7 +70,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 	
 	/**
 	 * @param string $driver
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetDriver($sDriver)
@@ -89,7 +86,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param string $sDatabase
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetDatabase($sDatabase)
@@ -100,7 +96,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param string $sUser
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetUser($sUser)
@@ -111,7 +106,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param string $sPassword
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetPassword($sPassword)
@@ -122,7 +116,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 	
 	/**
 	 * @param integer $iMinPassLength
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetMinPasswordLength($iMinPassLength)
@@ -133,7 +126,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param \MailSo\Log\Logger $oLogger
-	 *
 	 * @return \iRedMailChangePasswordDriver
 	 */
 	public function SetLogger(\MailSo\Log\Logger $oLogger)
@@ -144,7 +136,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 
 	/**
 	 * @param \RainLoop\Model\Account $oAccount
-	 *
 	 * @return bool
 	 */
 	public function PasswordChangePossibility($oAccount)
@@ -156,7 +147,6 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 	 * @param \RainLoop\Model\Account $oAccount
 	 * @param string $sPrevPassword
 	 * @param string $sNewPassword
-	 *
 	 * @return bool
 	 */
 	public function ChangePassword(\RainLoop\Account $oAccount, $sPrevPassword, $sNewPassword)
@@ -212,5 +202,3 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 		return shell_exec("doveadm pw -s 'ssha512' -p '{$sEscapedPassword}'");
 	}
 }
-
-
