@@ -1,6 +1,6 @@
 ## Redpass for RainLoop & iRedMail
 
-Redpass is a plugin for RainLoop allowing your iRedMail users change their passwords.  I'll call it beta for now.
+Redpass is a plugin for RainLoop allowing your iRedMail users change their passwords.
 
 ## Installation
 
