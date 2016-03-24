@@ -1,7 +1,7 @@
 <?php
 /**
  * rainloop-iredmail
- * A plugin for RainLoop to allow your iRedMail users change their passwords.
+ * A plugin for RainLoop to allow your iRedMail users to change their passwords.
  */
 
 class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword\ChangePasswordInterface
