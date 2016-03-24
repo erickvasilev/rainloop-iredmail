@@ -2,7 +2,7 @@
 
 A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users change their passwords.
 
-## Installation
+### Installation
 
 This plugin supports both MySQL and PostgreSQL iRedMail editions. Sorry, no OpenLDAP.
 
@@ -12,9 +12,9 @@ This plugin supports both MySQL and PostgreSQL iRedMail editions. Sorry, no Open
 
 If your iRedMail installation is modified enough to require such a change, the database hostname and other parameters can be edited in index.php.
 
-This is an unofficial plugin not connected to the iRedMail or RainLoop teams in any way, in case that was not obvious.
+This is an unofficial plugin with no affiliation to the iRedMail or RainLoop teams.
 
-## License
+### License
 
 Copyright (c) 2015, Jamie Hamilton  
 All rights reserved.
