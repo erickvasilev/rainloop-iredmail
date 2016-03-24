@@ -1,9 +1,7 @@
 <?php
 /**
- * Generic iRedMail password change driver
- * 
- * Redpass
- * An iRedMail change password plugin for RainLoop
+ * rainloop-iredmail
+ * A plugin for RainLoop to allow your iRedMail users change their passwords.
  */
 
 class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword\ChangePasswordInterface
@@ -161,16 +159,16 @@ class iRedMailChangePasswordDriver implements \RainLoop\Providers\ChangePassword
 					case 'mysql':
 						$sDsn = 'mysql:host='.$this->sHost.';port='.$this->iPort.';dbname='.$this->sDatabase;
 						$oPdo = new \PDO($sDsn, $this->sUser, $this->sPassword);
-					break;
+						break;
 					case 'pgsql':
 						$sDsn = 'pgsql:host='.$this->sHost.';port='.$this->iPort.';dbname='.$this->sDatabase.';user='.$this->sUser.';password='.$this->sPassword;
 						$oPdo = new \PDO($sDsn);
-					break;
+						break;
 					default:
 						if ( $this->oLogger ) {
 							$this->oLogger->Write('Invalid PDO driver: ' . $this->sDriver);
 						}
-					break;
+						break;
 				}
 
 				$oPdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
