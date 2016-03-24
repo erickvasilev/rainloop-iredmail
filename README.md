@@ -1,4 +1,4 @@
-## iredmail-rainloop
+## rainloop-iredmail
 
 A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users change their passwords.
 
