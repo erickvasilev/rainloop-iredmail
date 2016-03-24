@@ -6,11 +6,13 @@ A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http:/
 
 This plugin supports both MySQL and PostgreSQL iRedMail editions. Sorry, no OpenLDAP.
 
-1. Upload the iredmail directory to `data/_data_xxxx_/.../plugins` in your RainLoop installation.
+1. Upload the "iredmail" directory to `data/_data_xxxx_/.../plugins` in your RainLoop installation.
 2. Activate in admin panel.
 3. Configure with your iRedMail edition (MySQL/MariaDB or PgSQL), and the `vmail` database password iRedMail generated for you. You can find it in settings.py in iRedAdmin's root directory.
 
 If your iRedMail installation is modified enough to require such a change, the database hostname and other parameters can be edited in index.php.
+
+This is an unofficial plugin not connected to the iRedMail or RainLoop teams in any way, in case that was not obvious.
 
 ## License
 
