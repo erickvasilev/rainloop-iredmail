@@ -1,6 +1,6 @@
 ## rainloop-iredmail
 
-A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users change their passwords. Tested on RainLoop 1.9.4 and iRedMail 0.9.3.
+A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users to change their passwords. Tested on RainLoop 1.9.4 and iRedMail 0.9.3.
 
 ### Installation
 
