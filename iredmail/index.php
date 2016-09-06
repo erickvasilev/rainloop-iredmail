@@ -7,8 +7,7 @@
 class iRedMailPlugin extends \RainLoop\Plugins\AbstractPlugin
 {	
 	/**
-	 * iRedMail database stuff
-	 * This will not be changed 95% of the time. If you're the 5%, change it here.
+	 * iRedMail database stuff, modify if you need to.
 	 */
 	const IRM_HOST = '127.0.0.1';
 	const IRM_PORT_MYSQL = 3306;
@@ -44,33 +43,10 @@ class iRedMailPlugin extends \RainLoop\Plugins\AbstractPlugin
 	 */
 	public function Supported()
 	{
-		// This variable prefixing is dumb but I won't deviate from
-		// RainLoop's standard.
-		$fMinPhp = '5.4.0';
-		$aAvailablePdoDrivers = \PDO::getAvailableDrivers();
-		
-		// Needs PHP 5.4 for short array syntax. You could probably go down
-		// to 5.3 if you change those back.
-		if ( version_compare(PHP_VERSION, $fMinPhp, '<') ) {
-			return '[iRedMail Plugin] PHP must be version ' . $fMinPhp . ' or later.';
-		}
-		
-		// If some some reason you don't have PDO.
-		if ( !extension_loaded('pdo') || !class_exists('PDO') ) {
-			return '[iRedMail Plugin] PHP PDO must be available.';
-		}
-		
-		// If you think this is obvious you haven't dealt with customers.
-		if ( !in_array('mysql', $aAvailablePdoDrivers) && !in_array('pgsql', $aAvailablePdoDrivers) ) {
-			return '[iRedMail Plugin] Drivers for mysql and/or pgsql must be available for PDO.';
-		}
-		
-		// You can take out this check if you replace the crypt method with
-		// something not reliant on shell/dovecot.
-		if ( shell_exec('which doveadm') === null ) {
+		if ( shell_exec('which doveadm') === '' ) {
 			return '[iRedMail Plugin] Doveadm command must be available for password crypts.';
 		}
-				
+		
 		return null;
 	}
 
@@ -82,6 +58,7 @@ class iRedMailPlugin extends \RainLoop\Plugins\AbstractPlugin
 	 */
 	public function MainFabrica($sName, &$oProvider)
 	{
+		// This variable prefixing is dumb, but iRedMail does it by convention, so...
 		if ( $sName === 'change-password' ) {
 			// Grab driver
 			require __DIR__ . '/iRedMailChangePasswordDriver.php';
@@ -122,7 +99,6 @@ class iRedMailPlugin extends \RainLoop\Plugins\AbstractPlugin
 		return [
 			\RainLoop\Plugins\Property::NewInstance('edition')->SetLabel('Installation Type')->SetType(\RainLoop\Enumerations\PluginPropertyType::SELECTION)
 				->SetDefaultValue(array(static::IRM_EDITION_MYSQL_LABEL, static::IRM_EDITION_PGSQL_LABEL))->SetDescription('OpenLDAP edition is not supported.'),
-			
 			\RainLoop\Plugins\Property::NewInstance('vmail_password')->SetLabel('DB "vmail" Password')->SetType(\RainLoop\Enumerations\PluginPropertyType::PASSWORD)
 				->SetDefaultValue(''),
 		];
