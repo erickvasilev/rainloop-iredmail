@@ -1,6 +1,6 @@
 ## rainloop-iredmail
 
-A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users to change their passwords. Tested on RainLoop 1.10.4 and iRedMail 0.9.5-1.
+A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users to change their passwords. Tested on RainLoop 1.10 and iRedMail 0.9.
 
 ### Installation
 
@@ -8,8 +8,8 @@ This plugin supports both MySQL and PostgreSQL iRedMail editions. Sorry, no Open
 
 1. Upload the "iredmail" directory to `data/_data_/_default_/plugins` in your RainLoop installation. (NOTE: Older versions of RainLoop have a slightly different data directory structure with a random hash, but you will still find a plugins directory)
 2. Activate in the Plugins section of the admin area.
-3. Configure with your iRedMail edition (MySQL/MariaDB or PgSQL), and the `vmail` database password iRedMail generated for you. You can find it in settings.py in iRedAdmin's root directory (`/opt/www/iredadmin`).
-4. You may need to remove `escapeshellcmd` and `shell_exec` from PHP's disable_functions setting, in `/etc/php5-fpm/php.ini`.
+3. Configure with your iRedMail edition (MySQL/MariaDB or PgSQL), and the `vmail` database password iRedMail generated for you. You can find it in settings.py in iRedAdmin's root directory (`/opt/www/iredadmin` on Debian).
+4. You may need to remove `escapeshellcmd` and `shell_exec` from php.ini's disable_functions directive (`/etc/php5-fpm/php.ini` on Debian).
 
 If your iRedMail installation is modified enough to require such a change, the database hostname and other parameters can be edited in index.php.
 
