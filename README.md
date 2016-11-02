@@ -12,7 +12,7 @@ A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http:/
 1. Upload the "iredmail" directory to `data/_data_/_default_/plugins` in your RainLoop installation. (NOTE: Older versions of RainLoop have a slightly different data directory structure with a random hash, but you will still find a plugins directory)
 2. Activate in the Plugins section of the admin area.
 3. Configure with your iRedMail edition (MySQL/MariaDB or PgSQL), and the `vmail` database password iRedMail generated for you. You can find it in settings.py in iRedAdmin's root directory (`/opt/www/iredadmin` on Debian).
-4. You may need to remove `escapeshellcmd` and `shell_exec` from php.ini's disable_functions directive (`/etc/php5-fpm/php.ini` on Debian). This plugin uses the `doveadm` utility.
+4. You may need to remove `escapeshellcmd` and `shell_exec` from php.ini's disable_functions directive (`/etc/php5-fpm/php.ini` on Debian). This plugin uses the doveadm utility.
 
 The database hostname and other more complicated parameters can be edited in index.php.
 
