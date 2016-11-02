@@ -2,7 +2,7 @@
 
 A plugin for [RainLoop](http://www.rainloop.net) to allow your [iRedMail](http://www.iredmail.org) users to change their passwords. To use, just head to Settings in RainLoop and click Password at the left.
 
-## Requirements
+### Requirements
 
 * iRedMail 0.8 or greater, MySQL or PostgreSQL edition (Sorry, no OpenLDAP)
 * RainLoop 1.6 or greater
